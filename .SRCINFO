@@ -1,0 +1,20 @@
+pkgbase = ditana-config-micro
+	pkgdesc = Ditana micro editor configuration, including a desktop file for XFCE
+	pkgver = 1.05
+	pkgrel = 1
+	url = https://ditana.org
+	arch = any
+	license = AGPL-3.0-or-later AND MIT AND GPL-2.0-only
+	depends = micro
+	depends = xclip
+	depends = exo
+	source = settings.json
+	source = ditana-set-micro-as-default-editor.sh
+	source = micro.desktop
+	source = 10-ditana-micro
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ditana-config-micro
