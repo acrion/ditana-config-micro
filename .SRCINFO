@@ -1,6 +1,6 @@
 pkgbase = ditana-config-micro
 	pkgdesc = Ditana micro editor configuration, including a desktop file for XFCE
-	pkgver = 1.05
+	pkgver = 1.06
 	pkgrel = 1
 	url = https://ditana.org
 	arch = any
@@ -12,6 +12,8 @@ pkgbase = ditana-config-micro
 	source = ditana-set-micro-as-default-editor.sh
 	source = micro.desktop
 	source = 10-ditana-micro
+	source = 90-ditana-micro-editor.conf
+	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP

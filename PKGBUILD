@@ -1,7 +1,7 @@
 # Maintainer: Stefan Zipproth <s.zipproth@ditana.org>
 
 pkgname=ditana-config-micro
-pkgver=1.05
+pkgver=1.06
 pkgrel=1
 pkgdesc="Ditana micro editor configuration, including a desktop file for XFCE"
 arch=(any)
@@ -15,8 +15,10 @@ source=(
     'ditana-set-micro-as-default-editor.sh'
     'micro.desktop'
     '10-ditana-micro'
+    '90-ditana-micro-editor.conf'
 )
 sha256sums=(
+    'SKIP'
     'SKIP'
     'SKIP'
     'SKIP'
@@ -26,6 +28,7 @@ sha256sums=(
 package() {
     install -Dm644 $srcdir/settings.json $pkgdir/etc/skel/.config/micro/settings.json
     install -Dm644 $srcdir/ditana-set-micro-as-default-editor.sh $pkgdir/etc/profile.d/ditana-set-micro-as-default-editor.sh
+    install -Dm644 $srcdir/90-ditana-micro-editor.conf $pkgdir/etc/environment.d/90-ditana-micro-editor.conf
 
     # we overrule the default desktop shortcut to use exo-open --launch TerminalEmulator micro %F
     install -Dm755 $srcdir/micro.desktop $pkgdir/etc/skel/.local/share/applications/micro.desktop
